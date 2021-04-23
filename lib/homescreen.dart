@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'side_drawer.dart';
@@ -13,7 +14,7 @@ class _homescreenState extends State<homescreen> {
     return Scaffold(
 
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.green),
+        iconTheme: IconThemeData(color: Colors.red),
         title: Image.asset("assets/logolong.png", //gonna add the actual logo later
           height: 60,
         ),
@@ -31,53 +32,102 @@ class _homescreenState extends State<homescreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            GridView.count(crossAxisCount: 2,
+            GridView.count(
+              shrinkWrap: true,
+              primary: true,
+              crossAxisCount: 2,
               children: <Widget>[
-                FlatButton(
-                  onPressed: () {
-                    // Navigator.push(context, MaterialPageRoute(
-                    //   builder: (context) => resources(),
-                    // ),
-                    // );
-                  },
-                  child: Column(
-                    children: <Widget>[
-                      Container(
-
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          gradient: LinearGradient(
-                              colors: [Colors.green[800], Colors.lightGreen[500]]),
-                          shape: BoxShape.rectangle,
-                          borderRadius: BorderRadius.all(Radius.circular(50.0)),
-                        ),
-                        height: 80.0,
-                        width: 80.0,
-                        child: Icon(
-                          Icons.library_books,
-                          color: Colors.white,
-                          size:50.0,
-                          semanticLabel:
-                          'To access mental and physical health resources',
-                        ),
-                      ),
-                      Text("Resources")
-                    ],
-                  ),
+                Container(
                   color: Colors.transparent,
-                ),
-                FlatButton(
-                  onPressed: () {
-                    // Navigator.push(context, MaterialPageRoute(
-                    //   builder: (context) => access(),
-                    // ),
-                    // );
-                  },
-                  child: Column(
+                  child: FlatButton(
+                    onPressed: () {
+                      // Navigator.push(context, MaterialPageRoute(
+                      //   builder: (context) => access(),
+                      // ),
+                      // );
+                    },
+                    child: Column(
 
-                    children: <Widget>[
-                      Padding(padding: EdgeInsets.only(top: 30),
-                        child: Container(
+                      children: <Widget>[
+                        Padding(padding: EdgeInsets.only(top: 30),
+                          child: Container(
+
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              gradient: LinearGradient(
+                                  colors: [Colors.green[800], Colors.lightGreen[500]]),
+                              shape: BoxShape.rectangle,
+                              borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                            ),
+                            height: 80.0,
+                            width: 80.0,
+                            child: Icon(
+                              Icons.book_rounded,
+                              color: Colors.white,
+                              size:50.0,
+                              semanticLabel:
+                              'questions',
+                            ),
+                          ),
+                        ),
+                        Text("Resources"),
+                      ],
+                    ),
+                    color: Colors.transparent,
+                  ),
+                ),
+                Container(
+                  color: Colors.transparent,
+                  child: FlatButton(
+                    onPressed: () {
+                      // Navigator.push(context, MaterialPageRoute(
+                      //   builder: (context) => access(),
+                      // ),
+                      // );
+                    },
+                    child: Column(
+
+                      children: <Widget>[
+                        Padding(padding: EdgeInsets.only(top: 30),
+                          child: Container(
+
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              gradient: LinearGradient(
+                                  colors: [Colors.green[800], Colors.lightGreen[500]]),
+                              shape: BoxShape.rectangle,
+                              borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                            ),
+                            height: 80.0,
+                            width: 80.0,
+                            child: Icon(
+                              Icons.sticky_note_2_outlined,
+                              color: Colors.white,
+                              size:50.0,
+                              semanticLabel:
+                              'questions',
+                            ),
+                          ),
+                        ),
+                        Text("Assess Yourself"),
+                      ],
+                    ),
+                    color: Colors.transparent,
+                  ),
+                ),
+                Container(
+                  color: Colors.transparent,
+                  child: FlatButton(
+                    onPressed: () {
+                      // Navigator.push(context, MaterialPageRoute(
+                      //   builder: (context) => texting(),
+                      // ),
+                      // );
+                    },
+                    child: Column(
+                      children: <Widget>[
+
+                        Container(
 
                           decoration: BoxDecoration(
                             color: Colors.white,
@@ -89,90 +139,64 @@ class _homescreenState extends State<homescreen> {
                           height: 80.0,
                           width: 80.0,
                           child: Icon(
-                            Icons.sticky_note_2_outlined,
+                            Icons.messenger,
                             color: Colors.white,
                             size:50.0,
                             semanticLabel:
-                            'questions',
+                            "talking with therapists and buddies",
                           ),
                         ),
-                      ),
-                      Text("Assess Yourself"),
-                    ],
+                        Text("Texting"),
+                      ],
+                    ),
+                    color: Colors.transparent,
                   ),
-                  color: Colors.transparent,
                 ),
-                FlatButton(
-                  onPressed: () {
-                    // Navigator.push(context, MaterialPageRoute(
-                    //   builder: (context) => texting(),
-                    // ),
-                    // );
-                  },
-                  child: Column(
-                    children: <Widget>[
+                Container(
+                  color: Colors.transparent,
+                  child: FlatButton(
+                    onPressed: () {
+                      //   Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //
+                      //         builder: (context) => gamesidk()),
+                      //   );
+                    },
+                    child: Column(
+                      children: <Widget>[
+                        Container(
 
-                      Container(
-
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          gradient: LinearGradient(
-                              colors: [Colors.green[800], Colors.lightGreen[500]]),
-                          shape: BoxShape.rectangle,
-                          borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            gradient: LinearGradient(
+                                colors: [Colors.green[800], Colors.lightGreen[500]]),
+                            shape: BoxShape.rectangle,
+                            borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                          ),
+                          height: 80.0,
+                          width: 80.0,
+                          child: Icon(
+                            Icons.sports_basketball,
+                            color: Colors.white,
+                            size:50.0,
+                            semanticLabel:
+                            'games and exercises',
+                          ),
                         ),
-                        height: 80.0,
-                        width: 80.0,
-                        child: Icon(
-                          Icons.messenger,
-                          color: Colors.white,
-                          size:50.0,
-                          semanticLabel:
-                          "talking with therapists and buddies",
-                        ),
-                      ),
-                      Text("Texting"),
-                    ],
+                        Text("Games and Exercises"),
+                      ],
+                    ),
+                    color: Colors.transparent,
                   ),
-                  color: Colors.transparent,
-                ),
-                FlatButton(
-                  onPressed: () {
-                    //   Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //
-                    //         builder: (context) => gamesidk()),
-                    //   );
-                  },
-                  child: Column(
-                    children: <Widget>[
-                      Container(
 
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          gradient: LinearGradient(
-                              colors: [Colors.green[800], Colors.lightGreen[500]]),
-                          shape: BoxShape.rectangle,
-                          borderRadius: BorderRadius.all(Radius.circular(50.0)),
-                        ),
-                        height: 80.0,
-                        width: 80.0,
-                        child: Icon(
-                          Icons.sports_basketball,
-                          color: Colors.white,
-                          size:50.0,
-                          semanticLabel:
-                          'games and exercises',
-                        ),
-                      ),
-                      Text("Games and Exercises"),
-                    ],
-                  ),
-                  color: Colors.transparent,
                 ),
+
               ],
             ),
+
+
+
 
             Container(
 
@@ -226,3 +250,4 @@ class _homescreenState extends State<homescreen> {
     );
   }
 }
+
