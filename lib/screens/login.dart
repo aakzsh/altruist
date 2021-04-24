@@ -88,10 +88,13 @@ class _LoginScreenState extends State<LoginScreen> {
               shape: BoxShape.rectangle,
               borderRadius: BorderRadius.vertical(top: Radius.circular(20.0), bottom: Radius.circular(20.0)),
             ),
-            child: FlatButton(onPressed:(){
+            child: FlatButton(onPressed:()async{
               auth.signInWithEmailAndPassword(email: _email, password: _password);
+
               Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>homescreen()));
-            }, child: Text("LOGIN")),
+
+            },
+               child: Text("LOGIN")),
           ),
           Container(
               height: 50, width: 300,

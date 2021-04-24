@@ -2,7 +2,9 @@ import 'package:altruist/screens/resources.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/rendering.dart';
 import 'side_drawer.dart';
+import 'games_x_exercises.dart';
 
 class homescreen extends StatefulWidget {
   @override
@@ -10,6 +12,7 @@ class homescreen extends StatefulWidget {
 }
 
 class _homescreenState extends State<homescreen> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,11 +44,14 @@ class _homescreenState extends State<homescreen> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             GridView.count(
+
               shrinkWrap: true,
               primary: true,
               crossAxisCount: 2,
               children: <Widget>[
+
                 Container(
+                  height: double.infinity,
                   color: Colors.transparent,
                   child: Center(
                     child: FlatButton(
@@ -87,6 +93,7 @@ class _homescreenState extends State<homescreen> {
                   ),
                 ),
                 Container(
+                  height: double.infinity,
                   color: Colors.transparent,
                   child: Center(
                     child: FlatButton(
@@ -128,6 +135,7 @@ class _homescreenState extends State<homescreen> {
                   ),
                 ),
                 Container(
+                  height: double.infinity,
                   color: Colors.transparent,
                   child: Center(
                     child: FlatButton(
@@ -167,16 +175,17 @@ class _homescreenState extends State<homescreen> {
                   ),
                 ),
                 Container(
+                  height: double.infinity,
                   color: Colors.transparent,
                   child: Center(
                     child: FlatButton(
                       onPressed: () {
-                        //   Navigator.push(
-                        //     context,
-                        //     MaterialPageRoute(
-                        //
-                        //         builder: (context) => gamesidk()),
-                        //   );
+                           Navigator.push(
+                             context,
+                             MaterialPageRoute(
+
+                                 builder: (context) => exercises()),
+                           );
                       },
                       child: Column(
                         children: <Widget>[

@@ -3,11 +3,23 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 import 'src/app.dart';
+import 'screens/login.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
 
 final datenow = new DateTime.now();
 
+
+
 class MainDrawer extends StatelessWidget {
   FirebaseAuth auth = FirebaseAuth.instance;
+
+  final _auth = FirebaseAuth.instance;
+  String userEmail;
+  void getCurrentUserEmail() async {
+    final userEmail = await _auth.currentUser.email;
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,9 +46,9 @@ class MainDrawer extends StatelessWidget {
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       image: DecorationImage(
-                        image: AssetImage(
+                        image: NetworkImage(
                           //firebase se linked karna hai vro
-                          'assets/logo1.png',
+                          'https://i.ibb.co/pWxcfSR/Ein-Feuerwehrmann-steht-vor-einer-gro-en-Aufgabe-Er-ist-mit-schwerem-Atemschutz-ausger-stet-und-tr-g.jpg',
                         ),
                         fit: BoxFit.fill,
                       ),
@@ -45,7 +57,9 @@ class MainDrawer extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.all(5.0),
                     child: Text(
-                      'USERNAME',
+
+                      '$userEmail',
+                      
                       style: TextStyle(
                         fontWeight: FontWeight.w900,
                         fontSize: 15.0,
