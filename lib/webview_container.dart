@@ -1,3 +1,4 @@
+import 'package:altruist/homescreen.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -18,8 +19,30 @@ class _WebViewContainerState extends State<WebViewContainer> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(_title),
+        leading: BackButton(
+          color: Colors.white,
+          //onPressed: () => Navigator.of(context).pop();,
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(
+              builder: (context) => homescreen(),
+            ),
+            );
+          },
+        ),
+        backgroundColor: Colors.green,
+        iconTheme: IconThemeData(color: Colors.white),
+        title: Image.network("https://i.ibb.co/QbHLm3W/1619222838571.png", //gonna add the actual logo later
+          height: 60,
+        ),
+        flexibleSpace: Container(
+          // color: Colors.white,
+          decoration: BoxDecoration(
+            shape: BoxShape.rectangle,
+            borderRadius: BorderRadius.circular(0.0),
+          ),
+        ),
       ),
+
       body: Column(
         children: [
           Expanded(
