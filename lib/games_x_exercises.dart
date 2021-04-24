@@ -1,3 +1,4 @@
+import 'package:altruist/timer.dart';
 import 'package:flutter/material.dart';
 
 class exercises extends StatefulWidget {
@@ -20,7 +21,13 @@ class _exercisesState extends State<exercises> {
       children: <Widget>[
         Column(
           children: <Widget>[
-            FlatButton(onPressed: null, child: Image.network("https://media.giphy.com/media/4bjIKBOWUnVPICCzJc/giphy.gif",
+            FlatButton(onPressed: (){
+
+              // Navigator.push(context, MaterialPageRoute(
+              //   builder: (context) => timerCountdown(),
+              // ),
+              // );
+            }, child: Image.asset("assets/workout.gif",
             height: 150, width: 150,
             )),
             Text("Workout"),
@@ -28,7 +35,7 @@ class _exercisesState extends State<exercises> {
         ),
         Column(
           children: <Widget>[
-            FlatButton(onPressed: null, child: Image.network("https://media.giphy.com/media/3ornk8qaF9ytl9zmY8/source.gif",
+            FlatButton(onPressed: null, child: Image.asset("assets/stretching.gif",
               height: 150, width: 150,
             )),
             Text("Stretching"),
@@ -36,7 +43,7 @@ class _exercisesState extends State<exercises> {
         ),
         Column(
           children: <Widget>[
-            FlatButton(onPressed: null, child: Image.network("https://media.giphy.com/media/KAkIahp6EOc4ZJgKDv/giphy.gif",
+            FlatButton(onPressed: null, child: Image.asset("assets/breathing.gif",
               height: 150, width: 150,
             )),
             Text("Breathing"),
@@ -44,7 +51,7 @@ class _exercisesState extends State<exercises> {
         ),
         Column(
           children: <Widget>[
-            FlatButton(onPressed: null, child: Image.network("https://media.giphy.com/media/THD7thMQZoOYoyZ3EK/giphy.gif",
+            FlatButton(onPressed: null, child: Image.asset("assets/jogging.gif",
               height: 150, width: 150,
             )),
             Text("Jogging"),
@@ -52,7 +59,7 @@ class _exercisesState extends State<exercises> {
         ),
         Column(
           children: <Widget>[
-            FlatButton(onPressed: null, child: Image.network("https://media.giphy.com/media/3oKIPavRPgJYaNI97W/source.gif",
+            FlatButton(onPressed: null, child: Image.asset("assets/yoga.gif",
               height: 150, width: 150,
             )),
             Text("Yoga"),
@@ -60,7 +67,7 @@ class _exercisesState extends State<exercises> {
         ),
         Column(
           children: <Widget>[
-            FlatButton(onPressed: null, child: Image.network("https://media.giphy.com/media/3ornjHnlfyrQclXGZq/giphy.gif",
+            FlatButton(onPressed: null, child: Image.asset("assets/warmup.gif",
               height: 150, width: 150,
             )),
             Text("Warm-Up"),

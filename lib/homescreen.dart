@@ -7,6 +7,7 @@ import 'side_drawer.dart';
 import 'games_x_exercises.dart';
 import 'assess.dart';
 
+
 class homescreen extends StatefulWidget {
   @override
   _homescreenState createState() => _homescreenState();
@@ -94,10 +95,12 @@ class _homescreenState extends State<homescreen> {
                   child: Center(
                     child: FlatButton(
                       onPressed: () {
-                        // Navigator.push(context, MaterialPageRoute(
-                        //   builder: (context) => Access(),
-                        // ),
-                        // );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+
+                              builder: (context) => Assess()),
+                        );
                       },
                       child: Column(
 
@@ -174,12 +177,12 @@ class _homescreenState extends State<homescreen> {
                   child: Center(
                     child: FlatButton(
                       onPressed: () {
-                        //   Navigator.push(
-                        //     context,
-                        //     MaterialPageRoute(
-                        //
-                        //         builder: (context) => gamesidk()),
-                        //   );
+                           Navigator.push(
+                             context,
+                             MaterialPageRoute(
+
+                                 builder: (context) => exercises()),
+                           );
                       },
                       child: Column(
                         children: <Widget>[
