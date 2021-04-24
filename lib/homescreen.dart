@@ -214,8 +214,20 @@ class _homescreenState extends State<homescreen> {
                 options: CarouselOptions(height: 150.0,
                   autoPlay: true,
                   autoPlayInterval: Duration(seconds: 15),),
-                items: ["https://i.ibb.co/ZLWSD35/Whats-App-Image-2021-01-25-at-10-40-06-AM-1.jpg", //these two are sample images, gonna change then with actual 50-60 relevant quotes
-                  "https://i.ibb.co/8r8rHST/Whats-App-Image-2021-01-25-at-10-40-06-AM.jpg",
+                items: [
+                  "https://i.ibb.co/s997Ddv/20210424-073225.png",
+                  "https://i.ibb.co/QCDvPMt/20210424-073037.png",
+                  "https://i.ibb.co/sJCJpdV/20210424-072948.png",
+                  "https://i.ibb.co/djW5H5s/20210424-072834.png",
+                      "https://i.ibb.co/VQ9Tvdq/20210424-072654.png",
+                  "https://i.ibb.co/jwrFPT2/20210424-072541.png",
+                  "https://i.ibb.co/hmtxj55/20210424-072334.png",
+                  "https://i.ibb.co/Sxfw9pL/20210424-072202.png",
+                  "https://i.ibb.co/Pt1tBkD/20210424-072057.png",
+                      "https://i.ibb.co/4M4gwHB/20210424-071942.png",
+                  "https://i.ibb.co/HN10R98/20210424-071837.png",
+                  "https://i.ibb.co/z82ckvD/20210424-071656.png"
+
                 ].map((i)
 
                 {
@@ -258,4 +270,5 @@ class _homescreenState extends State<homescreen> {
     );
   }
 }
+
 

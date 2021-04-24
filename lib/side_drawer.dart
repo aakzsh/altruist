@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:toggle_switch/toggle_switch.dart';
@@ -5,6 +6,8 @@ import 'package:toggle_switch/toggle_switch.dart';
 final datenow = new DateTime.now();
 
 class MainDrawer extends StatelessWidget {
+  FirebaseAuth auth = FirebaseAuth.instance;
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -17,7 +20,7 @@ class MainDrawer extends StatelessWidget {
               shape: BoxShape.rectangle,
               borderRadius:
               BorderRadius.vertical(bottom: Radius.circular(40.0)),
-              gradient: LinearGradient(colors: [Colors.amber[600], Colors.red[600]]),
+              gradient: LinearGradient(colors: [Colors.green[600], Colors.lightGreen[800]]),
             ),
             width: double.infinity,
             padding: EdgeInsets.all(10.0),
@@ -93,7 +96,9 @@ class MainDrawer extends StatelessWidget {
           Align(
             alignment: Alignment.centerLeft,
             child: FlatButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                auth.signOut();
+              },
               icon: Icon(
                 Icons.account_circle,
               ),
@@ -111,7 +116,7 @@ class MainDrawer extends StatelessWidget {
             height: 80,
             width: double.infinity,
             decoration: BoxDecoration(
-              gradient: LinearGradient(colors: [Colors.red[600], Colors.amber[600]]),
+              gradient: LinearGradient(colors: [Colors.green[600], Colors.lightGreen[800]]),
               shape: BoxShape.rectangle,
               borderRadius: BorderRadius.vertical(top: Radius.circular(40.0)),
             ),
