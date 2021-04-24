@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'homescreen.dart';
+import 'side_drawer.dart';
 import 'package:altruist/screens/asses_result.dart';
 import 'package:flutter_question_answer_widget/flutter_question_answer_widget.dart';
 
@@ -34,23 +35,16 @@ class _AssessState extends State<Assess> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: BackButton(
-          color: Colors.white,
-          //onPressed: () => Navigator.of(context).pop();,
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => homescreen(),
-              ),
-            );
-          },
-        ),
         backgroundColor: Colors.green,
         iconTheme: IconThemeData(color: Colors.white),
-        title: Image.network(
-          "https://i.ibb.co/QbHLm3W/1619222838571.png", //gonna add the actual logo later
-          height: 60,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            Image.network(
+              "https://i.ibb.co/QbHLm3W/1619222838571.png", //gonna add the actual logo later
+              height: 60,
+            ),
+          ],
         ),
         flexibleSpace: Container(
           // color: Colors.white,
@@ -60,6 +54,7 @@ class _AssessState extends State<Assess> {
           ),
         ),
       ),
+      drawer: MainDrawer(),
       body: Center(
         child: ListView(
           children: [
