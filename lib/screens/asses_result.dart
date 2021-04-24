@@ -48,7 +48,6 @@ class AssessResult extends StatelessWidget {
           ),
         ),
       ),
-      drawer: MainDrawer(),
       backgroundColor: Colors.white,
       body: Center(
         child: Container(

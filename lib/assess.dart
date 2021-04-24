@@ -54,7 +54,6 @@ class _AssessState extends State<Assess> {
           ),
         ),
       ),
-      drawer: MainDrawer(),
       body: Center(
         child: ListView(
           children: [
