@@ -15,6 +15,7 @@ class _homescreenState extends State<homescreen> {
     return Scaffold(
 
       appBar: AppBar(
+
         iconTheme: IconThemeData(color: Colors.white),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.end,
@@ -32,6 +33,7 @@ class _homescreenState extends State<homescreen> {
           ),
         ),
       ),
+
       drawer: MainDrawer(),
       body: Container(
         color: Colors.white,

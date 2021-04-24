@@ -31,8 +31,13 @@ class _WebViewContainerState extends State<WebViewContainer> {
         ),
         backgroundColor: Colors.green,
         iconTheme: IconThemeData(color: Colors.white),
-        title: Image.network("https://i.ibb.co/QbHLm3W/1619222838571.png", //gonna add the actual logo later
-          height: 60,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            Image.network("https://i.ibb.co/QbHLm3W/1619222838571.png", //gonna add the actual logo later
+              height: 60,
+            ),
+          ],
         ),
         flexibleSpace: Container(
           // color: Colors.white,

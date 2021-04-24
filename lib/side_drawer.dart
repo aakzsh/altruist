@@ -79,6 +79,10 @@ class MainDrawer extends StatelessWidget {
             alignment: Alignment.centerLeft,
             child: FlatButton.icon(
               onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) => Privacy(),
+                ),
+                );
 
               },
               icon: Icon(
@@ -142,4 +146,17 @@ class MainDrawer extends StatelessWidget {
   }
 
 
+}
+
+
+class Privacy extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.white,
+       child: Center(
+          child: Image.network("https://i.ibb.co/4R1vWxk/20210424-134221.png", width: double.infinity,),
+        ),
+    );
+  }
 }
