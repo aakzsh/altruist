@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:toggle_switch/toggle_switch.dart';
+import 'src/app.dart';
 
 final datenow = new DateTime.now();
 
@@ -56,6 +57,23 @@ class MainDrawer extends StatelessWidget {
               ),
             ),
           ),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: ToggleSwitch(
+              minWidth: 90.0,
+              minHeight: 20.0,
+              fontSize: 16.0,
+              initialLabelIndex: 1,
+              activeBgColor: Colors.green,
+              activeFgColor: Colors.white,
+              inactiveBgColor: Colors.grey,
+              inactiveFgColor: Colors.grey[900],
+              labels: ['Light', 'dark'],
+              onToggle: (index) {
+                print('switched to: $index');  //add the functionality here @joey for dark mode toggle
+              },
+            ),
+          ),
 
           Align(
             alignment: Alignment.centerLeft,
@@ -75,29 +93,17 @@ class MainDrawer extends StatelessWidget {
               ),
             ),
           ),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: ToggleSwitch(
-              minWidth: 90.0,
-              minHeight: 90.0,
-              fontSize: 16.0,
-              initialLabelIndex: 1,
-              activeBgColor: Colors.green,
-              activeFgColor: Colors.white,
-              inactiveBgColor: Colors.grey,
-              inactiveFgColor: Colors.grey[900],
-              labels: ['Light', 'dark'],
-              onToggle: (index) {
-                print('switched to: $index');  //add the functionality here @joey for dark mode toggle
-              },
-            ),
-          ),
+
 
           Align(
             alignment: Alignment.centerLeft,
             child: FlatButton.icon(
               onPressed: () {
                 auth.signOut();
+                Navigator.push(context, MaterialPageRoute(
+                   builder: (context) => App(),
+                 ),
+                 );
               },
               icon: Icon(
                 Icons.account_circle,
