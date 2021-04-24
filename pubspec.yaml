@@ -25,10 +25,10 @@ dependencies:
     sdk: flutter
   carousel_slider: ^3.0.0
   toggle_switch: ^0.1.8
-  firebase_core: ^0.5.1
-  firebase_auth: ^0.18.2
+  firebase_core: ^1.0.4
+  firebase_auth: ^1.1.1
   provider: ^4.3.2+2
-  cloud_firestore: ^0.14.3
+  cloud_firestore: ^1.0.6
   webview_flutter: ^0.3.20
   flutter_question_answer_widget: ^0.0.2
   timer_count_down: ^2.0.1
