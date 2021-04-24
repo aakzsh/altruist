@@ -14,8 +14,8 @@ class _homescreenState extends State<homescreen> {
     return Scaffold(
 
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.red),
-        title: Image.asset("assets/logolong.png", //gonna add the actual logo later
+        iconTheme: IconThemeData(color: Colors.white),
+        title: Image.network("https://i.ibb.co/QbHLm3W/1619222838571.png", //gonna add the actual logo later
           height: 60,
         ),
         flexibleSpace: Container(
@@ -39,18 +39,100 @@ class _homescreenState extends State<homescreen> {
               children: <Widget>[
                 Container(
                   color: Colors.transparent,
-                  child: FlatButton(
-                    onPressed: () {
-                      // Navigator.push(context, MaterialPageRoute(
-                      //   builder: (context) => access(),
-                      // ),
-                      // );
-                    },
-                    child: Column(
+                  child: Center(
+                    child: FlatButton(
+                      onPressed: () {
+                        // Navigator.push(context, MaterialPageRoute(
+                        //   builder: (context) => access(),
+                        // ),
+                        // );
+                      },
+                      child: Column(
 
-                      children: <Widget>[
-                        Padding(padding: EdgeInsets.only(top: 30),
-                          child: Container(
+                        children: <Widget>[
+                          Padding(padding: EdgeInsets.only(top: 30),
+                            child: Container(
+
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                gradient: LinearGradient(
+                                    colors: [Colors.green[800], Colors.lightGreen[500]]),
+                                shape: BoxShape.rectangle,
+                                borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                              ),
+                              height: 80.0,
+                              width: 80.0,
+                              child: Icon(
+                                Icons.book_rounded,
+                                color: Colors.white,
+                                size:50.0,
+                                semanticLabel:
+                                'questions',
+                              ),
+                            ),
+                          ),
+                          Text("Resources"),
+                        ],
+                      ),
+                      color: Colors.transparent,
+                    ),
+                  ),
+                ),
+                Container(
+                  color: Colors.transparent,
+                  child: Center(
+                    child: FlatButton(
+                      onPressed: () {
+                        // Navigator.push(context, MaterialPageRoute(
+                        //   builder: (context) => access(),
+                        // ),
+                        // );
+                      },
+                      child: Column(
+
+                        children: <Widget>[
+                          Padding(padding: EdgeInsets.only(top: 30),
+                            child: Container(
+
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                gradient: LinearGradient(
+                                    colors: [Colors.green[800], Colors.lightGreen[500]]),
+                                shape: BoxShape.rectangle,
+                                borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                              ),
+                              height: 80.0,
+                              width: 80.0,
+                              child: Icon(
+                                Icons.sticky_note_2_outlined,
+                                color: Colors.white,
+                                size:50.0,
+                                semanticLabel:
+                                'questions',
+                              ),
+                            ),
+                          ),
+                          Text("Assess Yourself"),
+                        ],
+                      ),
+                      color: Colors.transparent,
+                    ),
+                  ),
+                ),
+                Container(
+                  color: Colors.transparent,
+                  child: Center(
+                    child: FlatButton(
+                      onPressed: () {
+                        // Navigator.push(context, MaterialPageRoute(
+                        //   builder: (context) => texting(),
+                        // ),
+                        // );
+                      },
+                      child: Column(
+                        children: <Widget>[
+
+                          Container(
 
                             decoration: BoxDecoration(
                               color: Colors.white,
@@ -62,34 +144,35 @@ class _homescreenState extends State<homescreen> {
                             height: 80.0,
                             width: 80.0,
                             child: Icon(
-                              Icons.book_rounded,
+                              Icons.messenger,
                               color: Colors.white,
                               size:50.0,
                               semanticLabel:
-                              'questions',
+                              "talking with therapists and buddies",
                             ),
                           ),
-                        ),
-                        Text("Resources"),
-                      ],
+                          Text("Texting"),
+                        ],
+                      ),
+                      color: Colors.transparent,
                     ),
-                    color: Colors.transparent,
                   ),
                 ),
                 Container(
                   color: Colors.transparent,
-                  child: FlatButton(
-                    onPressed: () {
-                      // Navigator.push(context, MaterialPageRoute(
-                      //   builder: (context) => access(),
-                      // ),
-                      // );
-                    },
-                    child: Column(
-
-                      children: <Widget>[
-                        Padding(padding: EdgeInsets.only(top: 30),
-                          child: Container(
+                  child: Center(
+                    child: FlatButton(
+                      onPressed: () {
+                        //   Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //
+                        //         builder: (context) => gamesidk()),
+                        //   );
+                      },
+                      child: Column(
+                        children: <Widget>[
+                          Container(
 
                             decoration: BoxDecoration(
                               color: Colors.white,
@@ -101,93 +184,18 @@ class _homescreenState extends State<homescreen> {
                             height: 80.0,
                             width: 80.0,
                             child: Icon(
-                              Icons.sticky_note_2_outlined,
+                              Icons.sports_basketball,
                               color: Colors.white,
                               size:50.0,
                               semanticLabel:
-                              'questions',
+                              'games and exercises',
                             ),
                           ),
-                        ),
-                        Text("Assess Yourself"),
-                      ],
+                          Text("Games and Exercises"),
+                        ],
+                      ),
+                      color: Colors.transparent,
                     ),
-                    color: Colors.transparent,
-                  ),
-                ),
-                Container(
-                  color: Colors.transparent,
-                  child: FlatButton(
-                    onPressed: () {
-                      // Navigator.push(context, MaterialPageRoute(
-                      //   builder: (context) => texting(),
-                      // ),
-                      // );
-                    },
-                    child: Column(
-                      children: <Widget>[
-
-                        Container(
-
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            gradient: LinearGradient(
-                                colors: [Colors.green[800], Colors.lightGreen[500]]),
-                            shape: BoxShape.rectangle,
-                            borderRadius: BorderRadius.all(Radius.circular(50.0)),
-                          ),
-                          height: 80.0,
-                          width: 80.0,
-                          child: Icon(
-                            Icons.messenger,
-                            color: Colors.white,
-                            size:50.0,
-                            semanticLabel:
-                            "talking with therapists and buddies",
-                          ),
-                        ),
-                        Text("Texting"),
-                      ],
-                    ),
-                    color: Colors.transparent,
-                  ),
-                ),
-                Container(
-                  color: Colors.transparent,
-                  child: FlatButton(
-                    onPressed: () {
-                      //   Navigator.push(
-                      //     context,
-                      //     MaterialPageRoute(
-                      //
-                      //         builder: (context) => gamesidk()),
-                      //   );
-                    },
-                    child: Column(
-                      children: <Widget>[
-                        Container(
-
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            gradient: LinearGradient(
-                                colors: [Colors.green[800], Colors.lightGreen[500]]),
-                            shape: BoxShape.rectangle,
-                            borderRadius: BorderRadius.all(Radius.circular(50.0)),
-                          ),
-                          height: 80.0,
-                          width: 80.0,
-                          child: Icon(
-                            Icons.sports_basketball,
-                            color: Colors.white,
-                            size:50.0,
-                            semanticLabel:
-                            'games and exercises',
-                          ),
-                        ),
-                        Text("Games and Exercises"),
-                      ],
-                    ),
-                    color: Colors.transparent,
                   ),
 
                 ),
