@@ -42,7 +42,7 @@ class _WebViewContainerState extends State<WebViewContainer> {
           ),
         ),
       ),
-
+      backgroundColor: Colors.white,
       body: Column(
         children: [
           Expanded(
