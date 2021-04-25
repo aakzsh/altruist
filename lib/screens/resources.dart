@@ -7,7 +7,7 @@ class resources extends StatelessWidget {
 
     return MaterialApp(
 
-      home: WebViewContainer('https://www.google.com', 'Resources'), //webpage url to be replaced
+      home: WebViewContainer('http://85.159.212.188/resources.html', 'Resources'), //webpage url to be replaced
     );
   }
 }
