@@ -7,6 +7,7 @@ import 'package:flutter/rendering.dart';
 import 'side_drawer.dart';
 import 'games_x_exercises.dart';
 import 'assess.dart';
+import 'useless.dart';
 
 class homescreen extends StatefulWidget {
   @override
@@ -139,7 +140,7 @@ class _homescreenState extends State<homescreen> {
                     child: FlatButton(
                       onPressed: () {
                          Navigator.push(context, MaterialPageRoute(
-                           builder: (context) => textingScreen(),
+                           builder: (context) => xyApp(),
                          ),
                          );
                       },

@@ -35,7 +35,7 @@ class _textingScreenState extends State<textingScreen> {
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              send("hello"),
+
               receive("hi"),
               send("how you doing"),
               receive("good lol"),
