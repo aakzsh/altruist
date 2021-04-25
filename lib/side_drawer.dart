@@ -1,7 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:toggle_switch/toggle_switch.dart';
+import 'Modelclass.dart';
 import 'src/app.dart';
 import 'screens/login.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -22,7 +24,9 @@ class MainDrawer extends StatelessWidget {
   }
 
   @override
+  
   Widget build(BuildContext context) {
+     final themeChange = Provider.of<DarkThemeProvider>(context);
     return Drawer(
 
       child: Column(
@@ -74,10 +78,11 @@ class MainDrawer extends StatelessWidget {
           Align(
             alignment: Alignment.centerLeft,
             child: ToggleSwitch(
+              initialLabelIndex:  1,
               minWidth: 90.0,
               minHeight: 20.0,
               fontSize: 16.0,
-              initialLabelIndex: 1,
+             // initialLabelIndex: 1,
               activeBgColor: Colors.green,
               activeFgColor: Colors.white,
               inactiveBgColor: Colors.grey,
@@ -85,6 +90,10 @@ class MainDrawer extends StatelessWidget {
               labels: ['Light', 'dark'],
               onToggle: (index) {
                 print('switched to: $index');  //add the functionality here @joey for dark mode toggle
+                //bool value;
+                //value= index ==1?true:false;
+                 themeChange.darkTheme = true;
+                
               },
             ),
           ),
