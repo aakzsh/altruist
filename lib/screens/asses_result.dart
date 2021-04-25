@@ -8,14 +8,14 @@ class AssessResult extends StatelessWidget {
     if (result == true)
       return "Congrats";
     else
-      return "A bit Stressed";
+      return "Hey there!";
   }
 
   String setComment() {
     if (result == true)
       return "Your are doing well!";
     else
-      return "xyz";
+      return "You might want to check out\n the resources section";
   }
 
   String getImage() {
@@ -62,6 +62,7 @@ class AssessResult extends StatelessWidget {
               ),
               Text(
                 setComment(),
+                textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 20, color: Colors.black54),
               ),
               SizedBox(
