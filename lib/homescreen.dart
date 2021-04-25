@@ -7,7 +7,6 @@ import 'side_drawer.dart';
 import 'games_x_exercises.dart';
 import 'assess.dart';
 
-
 class homescreen extends StatefulWidget {
   @override
   _homescreenState createState() => _homescreenState();
@@ -24,7 +23,7 @@ class _homescreenState extends State<homescreen> {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
-             Image.network("https://i.ibb.co/QbHLm3W/1619222838571.png", //gonna add the actual logo later
+            Image.network("https://i.ibb.co/QbHLm3W/1619222838571.png", //gonna add the actual logo later
               height: 60,
             ),
           ],
@@ -54,10 +53,10 @@ class _homescreenState extends State<homescreen> {
                   child: Center(
                     child: FlatButton(
                       onPressed: () {
-                         Navigator.push(context, MaterialPageRoute(
-                           builder: (context) => resources(),
-                         ),
-                         );
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) => resources(),
+                        ),
+                        );
                       },
                       child: Column(
 
@@ -177,12 +176,12 @@ class _homescreenState extends State<homescreen> {
                   child: Center(
                     child: FlatButton(
                       onPressed: () {
-                           Navigator.push(
-                             context,
-                             MaterialPageRoute(
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
 
-                                 builder: (context) => exercises()),
-                           );
+                              builder: (context) => exercises()),
+                        );
                       },
                       child: Column(
                         children: <Widget>[

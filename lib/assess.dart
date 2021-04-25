@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'homescreen.dart';
 import 'side_drawer.dart';
+import 'package:alert/alert.dart';
+
 import 'package:altruist/screens/asses_result.dart';
 import 'package:flutter_question_answer_widget/flutter_question_answer_widget.dart';
 
@@ -62,9 +64,9 @@ class _AssessState extends State<Assess> {
               child: FlutterQuestionAnswerWidget.singleSelection(
                 answersFontSize: 17,
                 questionTextStyle:
-                    TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
                 answerMargin:
-                    EdgeInsets.symmetric(horizontal: 45, vertical: 20),
+                EdgeInsets.symmetric(horizontal: 45, vertical: 20),
                 answerWidth: 200,
                 selectedAnswerBackGroundColor: Colors.green,
                 answered: ans1,
@@ -88,9 +90,9 @@ class _AssessState extends State<Assess> {
               child: FlutterQuestionAnswerWidget.singleSelection(
                 answersFontSize: 17,
                 questionTextStyle:
-                    TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
                 answerMargin:
-                    EdgeInsets.symmetric(horizontal: 45, vertical: 20),
+                EdgeInsets.symmetric(horizontal: 45, vertical: 20),
                 answerWidth: 200,
                 selectedAnswerBackGroundColor: Colors.green,
                 answered: ans2,
@@ -114,14 +116,14 @@ class _AssessState extends State<Assess> {
               child: FlutterQuestionAnswerWidget.singleSelection(
                 answersFontSize: 17,
                 questionTextStyle:
-                    TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
                 answerMargin:
-                    EdgeInsets.symmetric(horizontal: 45, vertical: 20),
+                EdgeInsets.symmetric(horizontal: 45, vertical: 20),
                 answerWidth: 200,
                 selectedAnswerBackGroundColor: Colors.green,
                 answered: ans3,
                 question:
-                    "3.	Generally, I react calmly when encountered with something unexpected.",
+                "3.	Generally, I react calmly when encountered with something unexpected.",
                 answerList: answerlist,
                 onChanged: (String value) {
                   setState(() {
@@ -141,14 +143,14 @@ class _AssessState extends State<Assess> {
               child: FlutterQuestionAnswerWidget.singleSelection(
                 answersFontSize: 17,
                 questionTextStyle:
-                    TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
                 answerMargin:
-                    EdgeInsets.symmetric(horizontal: 45, vertical: 20),
+                EdgeInsets.symmetric(horizontal: 45, vertical: 20),
                 answerWidth: 200,
                 selectedAnswerBackGroundColor: Colors.green,
                 answered: ans4,
                 question:
-                    "4.	I feel healthy (have good appetite, normal heart rate, etc.)",
+                "4.	I feel healthy (have good appetite, normal heart rate, etc.)",
                 answerList: answerlist,
                 onChanged: (String value) {
                   setState(() {
@@ -168,14 +170,14 @@ class _AssessState extends State<Assess> {
               child: FlutterQuestionAnswerWidget.singleSelection(
                 answersFontSize: 17,
                 questionTextStyle:
-                    TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
                 answerMargin:
-                    EdgeInsets.symmetric(horizontal: 45, vertical: 20),
+                EdgeInsets.symmetric(horizontal: 45, vertical: 20),
                 answerWidth: 200,
                 selectedAnswerBackGroundColor: Colors.green,
                 answered: ans5,
                 question:
-                    "5.	I can concentrate well and balance work-life as well as at home.",
+                "5.	I can concentrate well and balance work-life as well as at home.",
                 answerList: answerlist,
                 onChanged: (String value) {
                   setState(() {
@@ -197,8 +199,10 @@ class _AssessState extends State<Assess> {
                 color: Colors.green,
                 child: MaterialButton(
                   onPressed: () {
-                    //
                     print("$agree  $disagree");
+                    if (agree + disagree < 5) {
+                      Alert(message: "Please answer all questions").show();
+                    }
                     if (agree + disagree >= 5 && agree > disagree)
                       congrats = true;
                     else
@@ -219,9 +223,6 @@ class _AssessState extends State<Assess> {
                                 builder: (context) => AssessResult(congrats)));
                       });
                     }
-
-                    //else
-                    print("more");
                   },
                   child: Text(
                     'See Results',

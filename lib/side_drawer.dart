@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 import 'src/app.dart';
 import 'screens/login.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+
 
 
 final datenow = new DateTime.now();
@@ -59,7 +59,7 @@ class MainDrawer extends StatelessWidget {
                     child: Text(
 
                       '$userEmail',
-                      
+
                       style: TextStyle(
                         fontWeight: FontWeight.w900,
                         fontSize: 15.0,
@@ -119,9 +119,9 @@ class MainDrawer extends StatelessWidget {
               onPressed: () {
                 auth.signOut();
                 Navigator.push(context, MaterialPageRoute(
-                   builder: (context) => App(),
-                 ),
-                 );
+                  builder: (context) => App(),
+                ),
+                );
               },
               icon: Icon(
                 Icons.account_circle,
@@ -168,9 +168,9 @@ class Privacy extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-       child: Center(
-          child: Image.network("https://i.ibb.co/4R1vWxk/20210424-134221.png", width: double.infinity,),
-        ),
+      child: Center(
+        child: Image.network("https://i.ibb.co/4R1vWxk/20210424-134221.png", width: double.infinity,),
+      ),
     );
   }
 }
