@@ -1,4 +1,5 @@
 import 'package:altruist/screens/resources.dart';
+import 'package:altruist/texting.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -137,10 +138,10 @@ class _homescreenState extends State<homescreen> {
                   child: Center(
                     child: FlatButton(
                       onPressed: () {
-                        // Navigator.push(context, MaterialPageRoute(
-                        //   builder: (context) => texting(),
-                        // ),
-                        // );
+                         Navigator.push(context, MaterialPageRoute(
+                           builder: (context) => textingScreen(),
+                         ),
+                         );
                       },
                       child: Column(
                         children: <Widget>[
