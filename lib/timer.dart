@@ -81,7 +81,7 @@ class _TimerState extends State<Timer> {
                     child: Text(
                       finished,
                       style:
-                      TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
                     ),
                   )
                 ],
