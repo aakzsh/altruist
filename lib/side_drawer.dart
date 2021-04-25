@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 import 'src/app.dart';
 import 'screens/login.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+
 
 
 final datenow = new DateTime.now();
