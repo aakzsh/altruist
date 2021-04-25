@@ -19,16 +19,6 @@ class _WebViewContainerState extends State<WebViewContainer> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: BackButton(
-          color: Colors.white,
-          //onPressed: () => Navigator.of(context).pop();,
-          onPressed: () {
-            Navigator.push(context, MaterialPageRoute(
-              builder: (context) => homescreen(),
-            ),
-            );
-          },
-        ),
         backgroundColor: Colors.green,
         iconTheme: IconThemeData(color: Colors.white),
         title: Row(
@@ -48,6 +38,7 @@ class _WebViewContainerState extends State<WebViewContainer> {
         ),
       ),
       backgroundColor: Colors.white,
+      drawer: MainDrawer(),
       body: Column(
         children: [
           Expanded(
