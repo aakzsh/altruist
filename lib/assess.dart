@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'homescreen.dart';
 import 'side_drawer.dart';
+import 'package:alert/alert.dart';
+
 import 'package:altruist/screens/asses_result.dart';
 import 'package:flutter_question_answer_widget/flutter_question_answer_widget.dart';
 
@@ -197,8 +199,10 @@ class _AssessState extends State<Assess> {
                 color: Colors.green,
                 child: MaterialButton(
                   onPressed: () {
-                    //
                     print("$agree  $disagree");
+                    if (agree + disagree < 5) {
+                      Alert(message: "Please answer all questions").show();
+                    }
                     if (agree + disagree >= 5 && agree > disagree)
                       congrats = true;
                     else
@@ -219,9 +223,6 @@ class _AssessState extends State<Assess> {
                                 builder: (context) => AssessResult(congrats)));
                       });
                     }
-
-                    //else
-                    print("more");
                   },
                   child: Text(
                     'See Results',
